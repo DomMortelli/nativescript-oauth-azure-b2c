@@ -22,6 +22,8 @@ export interface ITnsOAuthCredentials {
     redirectUri: string;
     responseType?: string;
     scope: string;
+    additionalQueryParams?: [string];
+    responseMode?: string;
 }
 
 export interface ITnsOAuthCredentialsUaa extends ITnsOAuthCredentials {

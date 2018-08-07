@@ -148,7 +148,9 @@ var myInitOptions : tnsOAuthModule.ITnsOAuthCredentials = {
     clientId: 'myClientId',
     clientSecret: 'my-client-secret,
     redirectUri: 'myAppDomain://callback',
-    responseType: 'my tokens',
+    responseType: 'access_token',
+    responseMode: 'fragment'
+    additionalQueryParams: 'p=b2c_1_default'
     scope: 'my requested scopes',
 };
 

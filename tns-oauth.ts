@@ -89,10 +89,10 @@ export function getTokenFromRefreshToken(credentials: TnsOAuthModule.ITnsOAuthCr
 export function getAuthUrl(credentials: TnsOAuthModule.ITnsOAuthCredentials): string {
     return credentials.authority + credentials.authorizeEndpoint +
         '?client_id=' + credentials.clientId +
-        '&response_type=code' +
+        '&response_type=' + credentials.responseType ? credentials.responseType : 'code';
         '&redirect_uri=' + credentials.redirectUri +
         '&scope=' + credentials.scope +
-        '&response_mode=query' +
+        '&response_mode=' + credentials.responseMode ? credentials.responseMode : 'query';
         '&nonce=' + utils.newUUID() +
         '&state=abcd';
 }
